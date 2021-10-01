@@ -61,6 +61,10 @@ else
   unknown_commits="--allow-unknown "
 fi
 
+echo "git tag --sort version:refname --- $(git tag --sort version:refname)"
+echo "git tag --sort version:refname | tail -n 2 --- $(git tag --sort version:refname | tail -n 2)"
+echo "git tag --sort version:refname | tail -n 2 | head -n 1 --- $(git tag --sort version:refname | tail -n 2 | head -n 1)"
+
 echo "changelog_type -- $changelog_type"
 echo "previous_tag -- $previous_tag"
 echo "new_tag -- $new_tag"
